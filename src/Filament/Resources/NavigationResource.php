@@ -19,10 +19,11 @@ use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use RyanChandler\FilamentNavigation\FilamentNavigation;
 use RyanChandler\FilamentNavigation\Models\Navigation;
+use Filament\Schemas\Schema;
 
 class NavigationResource extends Resource
 {
-
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-bars-3';
     protected static bool $showTimestamps = true;
 
     private static ?string $workNavigationLabel = null;
@@ -36,7 +37,7 @@ class NavigationResource extends Resource
         static::$showTimestamps = ! $condition;
     }
 
-    public static function form(Form $form): Form
+    public static function form(Schema $form): Schema
     {
         return $form
             ->schema([
