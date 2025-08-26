@@ -4,8 +4,8 @@ namespace RyanChandler\FilamentNavigation\Filament\Resources\NavigationResource\
 
 use Filament\Actions\Action;
 use Filament\Forms\ComponentContainer;
-use Filament\Forms\Components\Component;
-use Filament\Forms\Components\Group;
+use Filament\Forms\Schemas\Component;
+use Filament\Forms\Schemas\Group;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Get;
